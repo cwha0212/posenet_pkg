@@ -1,0 +1,4 @@
+[console_scripts]
+Posenet_pytorch_node = posenet_pkg.Posenet_pytorch_node:main
+image_publish_node = posenet_pkg.image_publish:main
+

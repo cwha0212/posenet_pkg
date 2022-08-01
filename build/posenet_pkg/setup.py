@@ -1,0 +1,1 @@
+/root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/setup.py
