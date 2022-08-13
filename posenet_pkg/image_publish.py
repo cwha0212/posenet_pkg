@@ -33,7 +33,6 @@ def main(args=None):
   image_publisher = ImagePublisher()
 
   image_publisher.publish()
-  image_publisher.destroy_node()
 
   rclpy.shutdown()
 
