@@ -23,6 +23,7 @@ setup(
             'image_publish_node = posenet_pkg.image_publish:main',
             'Posenet_pytorch_node = posenet_pkg.Posenet_pytorch_node:main',
             'train_data_publish_node = posenet_pkg.train_data_publish:main',
+            'train_data_rviz_node = posenet_pkg.train_data_rviz:main',
         ],
     },
 )

@@ -35,9 +35,10 @@ class ImagePublisher(Node):
   def publish(self):
     msg = Image()
     for image in self.train_filenames:
-      msg = self.br.cv2_to_imgmsg(image)
+      image_cv2 = cv2.imread(image)
+      msg = self.br.cv2_to_imgmsg(image_cv2)
       self.publisher.publish(msg)
-      sleep(0.05)
+      sleep(0.5)
     self.get_logger().info('Publish Done! \n')
 
 
