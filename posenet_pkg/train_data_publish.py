@@ -2,14 +2,15 @@
 
 import rclpy
 from rclpy.node import Node
+from time import sleep
 
-from geometry_msgs.msg import Pose
+from geometry_msgs.msg import PoseArray, Pose
 
 
 class TrainDataPublisher(Node):
 
   def __init__(self):
-    super().__init__('tain_data_publish_node')
+    super().__init__('train_data_publish_node')
 
     self.publisher = self.create_publisher(Pose, 'train_pose', 10)
 
@@ -19,28 +20,36 @@ class TrainDataPublisher(Node):
     raw_lines = open(self.metadata_path, 'r',encoding='latin1').readlines()
     self.lines = raw_lines[3:]
 
-    self.poses = []
-    self.num = 0
+    self.train_poses = []
+    self.num = []
 
     for i, line in enumerate(self.lines):
       splits = line.split()
       values = splits[1:]
       values = list(map(lambda x: float(x.replace(",", "")), values))
-      self.poses.append(values)
-      self.num += 1
+      self.train_poses.append(values)
+      self.num.append(i)
 
   def publish(self):
-    msg = Pose()
-    for i in self.num
-      msg.position.x = float(self.poses[i][0])
-      msg.position.y = float(self.poses[i][1])
-      msg.position.z = float(self.poses[i][2])
-      msg.orientation.x = float(self.poses[i][4])
-      msg.orientation.y = float(self.poses[i][5])
-      msg.orientation.z = float(self.poses[i][6])
-      msg.orientation.w = float(self.poses[i][3])
-      self.publisher.publish(msg)
-      self.get_logger().info(f'{i} Publish Done! \n')
+    # msg = PoseArray()
+    val = Pose()
+    # msg.poses = []
+    for i in self.num:
+      val.position.x = self.train_poses[i][0]
+      val.position.y = self.train_poses[i][1]
+      val.position.z = self.train_poses[i][2]
+      val.orientation.x = self.train_poses[i][4]
+      val.orientation.y = self.train_poses[i][5]
+      val.orientation.z = self.train_poses[i][6]
+      val.orientation.w = self.train_poses[i][3]
+      # msg.poses.append(val)
+      self.publisher.publish(val)
+      sleep(0.05)
+      self.get_logger().info(f'{i} \n')
+
+    # self.publisher.publish(msg)
+    self.get_logger().info('Publish Done!! \n')
+
 
 def main(args=None):
 
