@@ -41,10 +41,8 @@ class PosenetNode(Node):
     self.get_logger().info('data load complete! \n')
 
     solver = Solver(data_loader)
-    self.get_logger().info('solver continue...! \n')
 
     pos, ori = solver.test()
-    self.get_logger().info('test complete! \n')
     pose_msg = Pose()
     pose_msg.position.x = float(pos[0])
     pose_msg.position.y = float(pos[1])
@@ -56,6 +54,7 @@ class PosenetNode(Node):
 
     self.get_logger().info(f'position [x:{pose_msg.position.x}, y:{pose_msg.position.y}, z:{pose_msg.position.z}]')
     self.get_logger().info(f'orientation [x:{pose_msg.orientation.x}, y:{pose_msg.orientation.y}, z:{pose_msg.orientation.z}, w:{pose_msg.orientation.w}]')
+    self.publisher.publish(pose_msg)
     self.get_logger().info('====Done====')
 
 

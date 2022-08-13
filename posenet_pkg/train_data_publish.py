@@ -16,7 +16,7 @@ class TrainDataPublisher(Node):
 
     self.get_logger().info('Node Started, Waiting.... \n')
 
-    self.metadata_path = "/root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/posenet_pkg/data/dataset_train.txt"
+    self.metadata_path = "/root/KingsCollege/dataset_train.txt"
     raw_lines = open(self.metadata_path, 'r',encoding='latin1').readlines()
     self.lines = raw_lines[3:]
 

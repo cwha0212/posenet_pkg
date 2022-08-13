@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
+import os
 from sensor_msgs.msg import Image
 import rclpy
 from rclpy.node import Node
 import cv2
 from cv_bridge import CvBridge
+from time import sleep
 
 class ImagePublisher(Node):
 
@@ -15,13 +17,27 @@ class ImagePublisher(Node):
 
     self.get_logger().info('Node Started, Waiting.... \n')
 
-    self.image = cv2.imread('/root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/posenet_pkg/image/test.png')
+    self.image_path = "/root/KingsCollege"
+    self.metadata_path = "/root/KingsCollege/dataset_train.txt"
+    raw_lines = open(self.metadata_path, 'r',encoding='latin1').readlines()
+    self.lines = raw_lines[3:]
+
+    self.train_filenames = []
+
+    for i, line in enumerate(self.lines):
+      splits = line.split()
+      filename = splits[0]
+      filename = os.path.join(self.image_path, filename)
+      self.train_filenames.append(filename)
+
     self.br = CvBridge()
 
   def publish(self):
     msg = Image()
-    msg = self.br.cv2_to_imgmsg(self.image)
-    self.publisher.publish(msg)
+    for image in self.train_filenames:
+      msg = self.br.cv2_to_imgmsg(image)
+      self.publisher.publish(msg)
+      sleep(0.05)
     self.get_logger().info('Publish Done! \n')
 
 
