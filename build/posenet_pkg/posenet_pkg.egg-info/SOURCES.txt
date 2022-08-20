@@ -3,13 +3,13 @@ setup.cfg
 setup.py
 posenet_pkg/Posenet_pytorch_node.py
 posenet_pkg/__init__.py
+posenet_pkg/data_publish.py
 posenet_pkg/image_publish.py
 posenet_pkg/node_data_loader.py
 posenet_pkg/node_model.py
 posenet_pkg/node_pose_utils.py
 posenet_pkg/node_solver.py
-posenet_pkg/train_data_publish.py
-posenet_pkg/train_data_rviz.py
+posenet_pkg/rviz.py
 posenet_pkg.egg-info/PKG-INFO
 posenet_pkg.egg-info/SOURCES.txt
 posenet_pkg.egg-info/dependency_links.txt
