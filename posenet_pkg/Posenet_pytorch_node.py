@@ -25,7 +25,7 @@ class PosenetNode(Node):
 
     self.publisher = self.create_publisher(Pose, 'posenet_pytorch', 10)
 
-    self.subscriber = self.create_subscription(Images, 'image/cv2', self.sub_callback, 10)
+    self.subscriber = self.create_subscription(Images, 'image', self.sub_callback, 10)
 
     self.br = CvBridge()
     
