@@ -38,7 +38,6 @@ class PosenetNode(Node):
     pil_img = Image.fromarray(cvt_img)
     cudnn.benchmark = True
     data_loader = get_loader(image=pil_img,model='Resnet',mode='test', batch_size=1)
-    self.get_logger().info('data load complete! \n')
 
     solver = Solver(data_loader)
 

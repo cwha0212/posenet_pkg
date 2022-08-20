@@ -11,10 +11,11 @@ class TrainDataRvizNode(Node):
   def __init__(self) -> None:
     super().__init__('train_data_rviz_node')
 
-    self.publisher = self.create_publisher(Marker, 'train_marker', 10)
+    self.publisher1 = self.create_publisher(Marker, 'train_marker', 10)
+    self.publisher2 = self.create_publisher(Marker, 'test_marker', 10)
 
-    self.subscriber = self.create_subscription(Pose, 'train_pose', self.sub_callback1, 10)
-    self.subscriber = self.create_subscription(Pose, 'posenet_pytorch', self.sub_callback2, 10)
+    self.subscriber1 = self.create_subscription(Pose, 'train_pose', self.sub_callback1, 10)
+    self.subscriber2 = self.create_subscription(Pose, 'posenet_pytorch', self.sub_callback2, 10)
     self.num = 0
     self.get_logger().info('Node Started, Waiting.... \n')
 
@@ -36,7 +37,7 @@ class TrainDataRvizNode(Node):
     marker_msg.color.g = 0.0
     marker_msg.color.b = 1.0
     marker_msg.pose = image_pose
-    self.publisher.publish(marker_msg)
+    self.publisher1.publish(marker_msg)
     self.num += 1
 
   def sub_callback2(self, msg):
@@ -57,7 +58,7 @@ class TrainDataRvizNode(Node):
     marker_msg.color.g = 1.0
     marker_msg.color.b = 0.0
     marker_msg.pose = image_pose
-    self.publisher.publish(marker_msg)
+    self.publisher2.publish(marker_msg)
     self.num += 1
 
 def main(args=None):
