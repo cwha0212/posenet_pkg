@@ -22,13 +22,9 @@ setup(
         'console_scripts': [
             'image_publish_node = posenet_pkg.image_publish:main',
             'Posenet_pytorch_node = posenet_pkg.Posenet_pytorch_node:main',
-<<<<<<< HEAD
             'data_publish_node = posenet_pkg.data_publish:main',
             'rviz_node = posenet_pkg.rviz:main',
-=======
-            'train_data_publish_node = posenet_pkg.train_data_publish:main',
-            'train_data_rviz_node = posenet_pkg.train_data_rviz:main',
->>>>>>> cfc09317b5494b745aca61a8dc7ac8fab627ca97
+
         ],
     },
 )
