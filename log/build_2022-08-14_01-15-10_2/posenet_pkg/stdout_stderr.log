@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing posenet_pkg.egg-info/PKG-INFO
+writing dependency_links to posenet_pkg.egg-info/dependency_links.txt
+writing entry points to posenet_pkg.egg-info/entry_points.txt
+writing requirements to posenet_pkg.egg-info/requires.txt
+writing top-level names to posenet_pkg.egg-info/top_level.txt
+reading manifest file 'posenet_pkg.egg-info/SOURCES.txt'
+writing manifest file 'posenet_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/python3.8/site-packages/posenet-pkg.egg-link (link to .)
+Installing Posenet_pytorch_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+Installing image_publish_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+Installing train_data_publish_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+Installing train_data_rviz_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+
+Installed /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/build/posenet_pkg
+running install_data

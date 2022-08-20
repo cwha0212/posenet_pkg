@@ -1,0 +1,20 @@
+[1.355s] Invoking command in '/root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/build/posenet_pkg': PYTHONPATH=/root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg --editable --build-directory /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/build/posenet_pkg/build --no-deps install_data --install-dir /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg
+[1.774s] running develop
+[1.969s] running egg_info
+[1.969s] writing posenet_pkg.egg-info/PKG-INFO
+[1.970s] writing dependency_links to posenet_pkg.egg-info/dependency_links.txt
+[1.970s] writing entry points to posenet_pkg.egg-info/entry_points.txt
+[1.970s] writing requirements to posenet_pkg.egg-info/requires.txt
+[1.971s] writing top-level names to posenet_pkg.egg-info/top_level.txt
+[2.019s] reading manifest file 'posenet_pkg.egg-info/SOURCES.txt'
+[2.021s] writing manifest file 'posenet_pkg.egg-info/SOURCES.txt'
+[2.070s] running build_ext
+[2.071s] Creating /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/python3.8/site-packages/posenet-pkg.egg-link (link to .)
+[2.072s] Installing Posenet_pytorch_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+[2.072s] Installing image_publish_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+[2.073s] Installing train_data_publish_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+[2.073s] Installing train_data_rviz_node script to /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/posenet_pkg
+[2.073s] 
+[2.073s] Installed /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/build/posenet_pkg
+[2.073s] running install_data
+[2.166s] Invoked command in '/root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/build/posenet_pkg' returned '0': PYTHONPATH=/root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg --editable --build-directory /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/build/posenet_pkg/build --no-deps install_data --install-dir /root/gcamp_ros2_ws/src/gcamp_ros2_basic/posenet_pkg/install/posenet_pkg

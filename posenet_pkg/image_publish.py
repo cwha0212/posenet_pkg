@@ -18,7 +18,7 @@ class ImagePublisher(Node):
     self.get_logger().info('Node Started, Waiting.... \n')
 
     self.image_path = "/root/KingsCollege"
-    self.metadata_path = "/root/KingsCollege/dataset_train.txt"
+    self.metadata_path = "/root/KingsCollege/dataset_test.txt"
     raw_lines = open(self.metadata_path, 'r',encoding='latin1').readlines()
     self.lines = raw_lines[3:]
 
@@ -38,7 +38,7 @@ class ImagePublisher(Node):
       image_cv2 = cv2.imread(image)
       msg = self.br.cv2_to_imgmsg(image_cv2)
       self.publisher.publish(msg)
-      sleep(0.5)
+      sleep(1)
     self.get_logger().info('Publish Done! \n')
 
 

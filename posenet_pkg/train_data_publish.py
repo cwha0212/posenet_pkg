@@ -16,7 +16,7 @@ class TrainDataPublisher(Node):
 
     self.get_logger().info('Node Started, Waiting.... \n')
 
-    self.metadata_path = "/root/KingsCollege/dataset_train.txt"
+    self.metadata_path = "/root/KingsCollege/dataset_test.txt"
     raw_lines = open(self.metadata_path, 'r',encoding='latin1').readlines()
     self.lines = raw_lines[3:]
 
@@ -31,9 +31,7 @@ class TrainDataPublisher(Node):
       self.num.append(i)
 
   def publish(self):
-    # msg = PoseArray()
     val = Pose()
-    # msg.poses = []
     for i in self.num:
       val.position.x = self.train_poses[i][0]
       val.position.y = self.train_poses[i][1]
@@ -42,12 +40,9 @@ class TrainDataPublisher(Node):
       val.orientation.y = self.train_poses[i][5]
       val.orientation.z = self.train_poses[i][6]
       val.orientation.w = self.train_poses[i][3]
-      # msg.poses.append(val)
       self.publisher.publish(val)
-      sleep(0.05)
-      self.get_logger().info(f'{i} \n')
+      sleep(0.2)
 
-    # self.publisher.publish(msg)
     self.get_logger().info('Publish Done!! \n')
 
 
