@@ -12,7 +12,7 @@ class DataPublisher(Node):
   def __init__(self):
     super().__init__('data_publish_node')
 
-    self.publisher = self.create_publisher(PoseArray, 'train_pose', 10)
+    self.publisher = self.create_publisher(PoseArray, 'train_posearray', 10)
 
     self.get_logger().info('Node Started, Waiting.... \n')
 
@@ -43,7 +43,7 @@ class DataPublisher(Node):
       val.orientation.w = self.train_poses[i][3]
       msg.poses.append(val)
       sleep(0.2)
-      
+
     msg.header.frame_id = "/my_frame"
     self.publisher.publish(msg)
     self.get_logger().info('Publish Done!! \n')
