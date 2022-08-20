@@ -10,7 +10,7 @@ from geometry_msgs.msg import PoseArray, Pose
 class TrainDataPublisher(Node):
 
   def __init__(self):
-    super().__init__('train_data_publish_node')
+    super().__init__('data_publish_node')
 
     self.publisher = self.create_publisher(Pose, 'train_pose', 10)
 
@@ -50,9 +50,9 @@ def main(args=None):
 
   rclpy.init(args=args)
 
-  train_data_publisher = TrainDataPublisher()
+  data_publisher = DataPublisher()
 
-  train_data_publisher.publish()
+  data_publisher.publish()
 
   rclpy.shutdown()
 

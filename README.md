@@ -61,3 +61,17 @@
 
 를 해주면 사용할 준비가 다 되었다. ~~이렇게 한 이유는 원래 코드에서 PIL를 사용했기 때문이다.~~
 후에 밑에줄 부터는 `test.py`의 main 함수 부분을 가져왔고, 데이터들을 pos, ori에 반환 받은 후 각 Pose의 값에 넣어주었다. 이렇게 msg가 완성되고, 나는 출력하는 것 까지만 실행하였다.
+
+---
+
+## data_publish.py
+
+데이터 시각화를 위해서 사용한 데이터의 ground truth 값을 추출하고 전송하는 node이다. `geometry_msgs/Pose.msg`를 publish한다.
+
+---
+
+## rviz.py
+
+마찬가지로 데이터 시각화를 위해 사용한 node이다. `visualization_msgs/Marker.msg`를 사용하였고, Arrow형태를 사용하였다. posenet_pytorch를 사용하여 생성된 Pose추측값과 ground truth값을 각각 초록, 파랑으로 설정하였다.
+
+![스크린샷](/image/Resnet_34.png)

@@ -13,7 +13,7 @@ class ImagePublisher(Node):
   def __init__(self):
     super().__init__('image_node')
 
-    self.publisher = self.create_publisher(Image, 'image/cv2', 10)
+    self.publisher = self.create_publisher(Image, 'image', 10)
 
     self.get_logger().info('Node Started, Waiting.... \n')
 
