@@ -74,4 +74,5 @@
 
 마찬가지로 데이터 시각화를 위해 사용한 node이다. `visualization_msgs/Marker.msg`를 사용하였고, Arrow형태를 사용하였다. posenet_pytorch를 사용하여 생성된 Pose추측값과 ground truth값을 각각 초록, 파랑으로 설정하였다.
 
-![스크린샷](/image/Resnet_34.png)
+![스크린샷1](/image/Resnet_34.png)
+![스크린샷2](/image/rqt_graph.png)
