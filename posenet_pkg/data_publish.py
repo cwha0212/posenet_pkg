@@ -42,8 +42,9 @@ class DataPublisher(Node):
       val.orientation.z = self.train_poses[i][6]
       val.orientation.w = self.train_poses[i][3]
       msg.poses.append(val)
-      msg.header.frame_id = "/my_frame"
       sleep(0.2)
+      
+    msg.header.frame_id = "/my_frame"
     self.publisher.publish(msg)
     self.get_logger().info('Publish Done!! \n')
 
