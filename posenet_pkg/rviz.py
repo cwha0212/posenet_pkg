@@ -6,10 +6,10 @@ from rclpy.node import Node
 from geometry_msgs.msg import Pose
 from visualization_msgs.msg import Marker, MarkerArray
 
-class TrainDataRvizNode(Node):
+class RvizNode(Node):
 
   def __init__(self) -> None:
-    super().__init__('train_data_rviz_node')
+    super().__init__('rviz_node')
 
     self.publisher1 = self.create_publisher(Marker, 'train_marker', 10)
     self.publisher2 = self.create_publisher(Marker, 'test_marker', 10)
@@ -64,9 +64,9 @@ class TrainDataRvizNode(Node):
 def main(args=None):
 
   rclpy.init(args=args)
-  train_data_rviz_node = TrainDataRvizNode()
+  rviz_node = RvizNode()
 
-  rclpy.spin(train_data_rviz_node)
+  rclpy.spin(rviz_node)
 
   rclpy.shutdown()
   print("done")

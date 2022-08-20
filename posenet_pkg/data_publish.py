@@ -7,7 +7,7 @@ from time import sleep
 from geometry_msgs.msg import PoseArray, Pose
 
 
-class TrainDataPublisher(Node):
+class DataPublisher(Node):
 
   def __init__(self):
     super().__init__('data_publish_node')
