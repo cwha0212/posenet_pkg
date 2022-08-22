@@ -1,5 +1,9 @@
 # Posenet-pytorch를 돌려보고, 이를 ROS 노드로 제작해보았다.
 
+---
+
+## 사용코드
+
 - Posenet-pytorch : https://github.com/youngguncho/PoseNet-Pytorch
 - Posenet-pytorch-ROS : https://github.com/cwha0212/PoseNet-Pytorch-ROS
 
@@ -27,6 +31,8 @@
 - `Posenet_pytorch_node.py`
 - `model/best_net.pth`
 - `image/test.png`
+- `data_publish.py`
+- `rviz.py`
 
 로 구성이 되어있다. 앞에 **node_** 가 붙은 4개의 파일은 기존에 있던 파일에서 내가 원하는 부분만 추출하고, 또 몇가지 argument를 다른것으로 대체하여 만들었다. 큰 틀만 살펴보면
 
