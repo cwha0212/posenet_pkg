@@ -2,7 +2,7 @@
 
 import os
 import rclpy
-from rclpy import Node
+from rclpy.node import Node
 import cv2
 import numpy as np
 from cv_bridge import CvBridge
